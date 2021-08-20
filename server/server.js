@@ -14,14 +14,6 @@ app.use(session({
   saveUninitialized: false
 }))
 
-// ==== REMOVE!!!! ====
-// const userData = require('./userData')
-// app.use((req, res, next) => {
-//   req.session.user = userData;
-//   next();
-// })
-// =====================
-
 app.get('/auth/user-data', user.userData)
 app.get('/auth/logout', user.logout)
 app.post('/auth/login', user.login)
